@@ -1,4 +1,8 @@
 class ShortenedUrlsController < ApplicationController
+  def root
+    render :form
+  end
+  
   def create
     @shortened_url = ShortenedUrl.new(shortened_params)
     
