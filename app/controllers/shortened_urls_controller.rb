@@ -8,6 +8,8 @@ class ShortenedUrlsController < ApplicationController
     
     if @shortened_url.save
       render :show
+    else
+      render json: @shortened_url.errors, status: :unprocessable_entity
     end
   end
   

@@ -11,3 +11,50 @@
  *= require_self
  *= require_tree .
  */
+.content-wrapper {
+ 	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+  width: 525px;
+  height: 45px;
+	background-color: tomato;
+	box-shadow: 2px 2px 0.5px #888888;
+	border-radius: 3px;
+}
+.output-wrapper {
+ 	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	width: 395px;
+	height: 75px;
+	background-color: springgreen;
+	box-shadow: 2px 2px 0.5px #888888;
+	border-radius: 3px;
+	font-family: arial;
+}
+.output-text{
+	padding-left: 12px;
+	padding-top: 10px;
+}
+.form-contents {
+	padding-top: 11px;
+	padding-left: 10px;
+}
+.input-text {
+	color: white;
+	font-family: arial;
+}
+.input-area {
+	position: relative;
+	left: 10px;
+	width: 200px;
+}
+.submit {
+	position: relative;
+	left: 16px;
+	font-family: arial;
+	height: 21px;
+}
+.submit:hover {
+	cursor: pointer;
+}
