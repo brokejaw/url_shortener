@@ -1,6 +1,7 @@
 class ShortenedUrl < ActiveRecord::Base
   validates :short_url, presence: true, uniqueness: true
   validates :long_url, presence: true
+  validates :long_url, url: true
   
   before_validation :generate_short_url
   
@@ -10,7 +11,7 @@ class ShortenedUrl < ActiveRecord::Base
   
   def self.random_code
     loop do
-      random_code = SecureRandom.urlsafe_base64(16)
+      random_code = SecureRandom.urlsafe_base64(10)
       return random_code unless ShortenedUrl.exists?(short_url: random_code)
     end
   end

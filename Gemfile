@@ -34,6 +34,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :production do
@@ -42,7 +43,11 @@ group :production do
 end
 
 group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'launchy'
   gem 'guard-rspec'
+  gem 'shoulda-matchers'
 end
 
 # Use ActiveModel has_secure_password
