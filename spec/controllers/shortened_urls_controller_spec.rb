@@ -18,9 +18,9 @@ RSpec.describe ShortenedUrlsController, :type => :controller do
   describe 'POST #create' do
     
     context "with valid attributes" do
-      it "renders the show page" do
+      it "renders the index page" do
         post :create, shortened_url: FactoryGirl.attributes_for(:shortened_url)
-        expect(response).to render_template(:show)
+        expect(response).to render_template(:index)
       end
     end
     
