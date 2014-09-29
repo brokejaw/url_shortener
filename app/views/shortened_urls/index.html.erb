@@ -1,0 +1,12 @@
+<div class="output-wrapper">
+	<div class="output-text">
+	Original URL: <%=@shortened_url.long_url%><br>
+	
+	<form action="/shortened_urls/<%=@shortened_url.id%>" method="get">
+		Shortened URL: <input type="submit" value="<%=@shortened_url.short_url%>"<br>
+	</form>
+	
+	<%= link_to "Create another shortened URL", root_path %>
+	</div>
+</div>
+

@@ -7,10 +7,16 @@ class ShortenedUrlsController < ApplicationController
     @shortened_url = ShortenedUrl.new(shortened_params)
     
     if @shortened_url.save
-      render :show
+      render :index
     else
       render json: @shortened_url.errors, status: :unprocessable_entity
     end
+  end
+  
+  def show
+    @shortened_url = ShortenedUrl.find(params[:id])
+   
+    redirect_to "#{@shortened_url.long_url}"
   end
   
   private
